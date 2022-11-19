@@ -21,16 +21,7 @@ public class InvoiceHeader {
     private String name;
     private ArrayList<InvoiceLine> lines;
 
-    public double getTotal() {
-        double total = 0;
-        for (InvoiceLine line : lines) {
-            total += line.getTotal();
-        }
-        return total;
-    }
-        public ArrayList<InvoiceLine> getLines() {
-        return lines;
-    }
+   
 
     public InvoiceHeader(int num, Date date, String name) {
         this.num = num;
@@ -85,7 +76,25 @@ public class InvoiceHeader {
                 ", name='" + name + '\'' +
                 '}';
     }
-
+ 
+    public double getTotal() {
+        double total = 0;
+        for (InvoiceLine line : getLines()) {
+            total += line.getTotal();
+        }
+        return total;
+    }
+    
+    public ArrayList<InvoiceLine> getLines() {
+        if (lines == null)
+            lines = new ArrayList<>();
+        return lines;
+    }
+    
+    
+     /*   public ArrayList<InvoiceLine> getLines() {
+        return lines;
+    }*/
    
     
 }

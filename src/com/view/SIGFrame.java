@@ -72,13 +72,10 @@ public class SIGFrame extends javax.swing.JFrame {
 
         invoicesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "No.", "Date", "Customer", "Total"
+
             }
         ));
         invoicesTable.setToolTipText("");
@@ -99,19 +96,17 @@ public class SIGFrame extends javax.swing.JFrame {
 
         linesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "No", "Item Name", "Item Price ", "Count", "Item Total"
+
             }
         ));
         linesTable.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            }
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
                 linesTableInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
         });
         jScrollPane2.setViewportView(linesTable);
